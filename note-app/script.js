@@ -9,7 +9,7 @@ if (notes) {
 }
 
 addBtn.addEventListener("click", () =>{
-
+    addNewNote();
 })
 
 function addNewNote(text = "") {
