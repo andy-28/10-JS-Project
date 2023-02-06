@@ -8,9 +8,9 @@ if (notes) {
     });
 }
 
-addBtn.addEventListener("click", () =>{
+addBtn.addEventListener("click", () => {
     addNewNote();
-})
+});
 
 function addNewNote(text = "") {
     const note = document.createElement("div");
