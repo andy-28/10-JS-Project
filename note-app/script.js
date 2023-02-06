@@ -4,7 +4,7 @@ const notes = JSON.parse(localStorage.getItem("notes"));
 
 if (notes) {
     notes.forEach((note) => {
-        
+        addNewNote(note);
     });
 }
 
@@ -40,6 +40,22 @@ function addNewNote(text = "") {
         main.classList.toggle("hidden");
         textArea.classList.toggle("hidden");
     });
+
+    deleteBtn.addEventListener("click", () => {
+        note.remove();
+
+        updateLS();
+    });
+
+    textArea.addEventListener("input", (e) => {
+        const { value } = e.target;
+
+        main.innerHTML = marked(value);
+
+        updateLS();
+    });
+
+    document.body.appendChild(note);
 
 }
 
