@@ -14,3 +14,9 @@ async function getUser(username) {
     gerRepos(username);
 }
 
+async function gerRepos(username) {
+    const resp = await fetch(APIURL + username + "/repos");
+    const respData = await resp.json();
+
+    addReposToCard(respData);
+}
