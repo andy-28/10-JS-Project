@@ -4,5 +4,5 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
-getUser("andy-08");
+getUser("andy-28");
 
