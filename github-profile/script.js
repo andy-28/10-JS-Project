@@ -6,3 +6,11 @@ const search = document.getElementById("search");
 
 getUser("andy-28");
 
+async function getUser(username) {
+    const resp = await fetch(APIURL + username);
+    const respData = await resp.json;
+
+    createUserCard(respData);
+    gerRepos(username);
+}
+
