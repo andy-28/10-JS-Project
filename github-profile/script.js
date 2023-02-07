@@ -42,3 +42,33 @@ function createUserCard(user) {
 
     main.innerHTML = cardHTML;
 }
+
+function addReposToCard(repos) {
+    const reposEl = document.getElementById("repos");
+
+    repos
+        .sort((a, b) => b.stargazers_count - a.stargazers_count)
+        .slice(0, 10)
+        .forEach((repo) => {
+            const repoEl = document.createElement("a");
+            repoEl.classList.add("repo");
+
+            repoEl.href = repo.html_url;
+            repoEl.target = "_blank";
+            repoEl.innerText = repo.name;
+
+            reposEl.appendChild(repoEl);
+        });
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const user = search.value;
+
+    if (user) {
+        getUser(user);
+
+        search.value = "";
+    }
+});
