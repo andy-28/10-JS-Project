@@ -18,5 +18,23 @@ form.addEventListener("submit", (e) => {
 
 function addTodo(todo) {
     let todoText = input.value;
-    
+
+    if (todo) {
+        todoText = todo.text;
+    }
+
+
+}
+
+function updateLS() {
+    const todosEl = document.querySelectorAll("li");
+
+    const todos = [];
+
+    todosEl.forEach((todoEl) => {
+        todos.push({
+            text: todoEl.innerText,
+            completed: todoEl.classList.contains("completed"),
+        });
+    });
 }
