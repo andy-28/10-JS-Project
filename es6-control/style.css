@@ -56,4 +56,16 @@ body{
     color: rgba(255, 255, 255, 0.75);
     translate: 0 -46px;
   }
+
+
+  #hover-btn {
+    position: absolute;
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
