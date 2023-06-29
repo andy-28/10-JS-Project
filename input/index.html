@@ -8,7 +8,33 @@
 </head>
 <body>
 
-    
+
+<div class="l-wrapper">
+    <div class="c-card">
+      <div class="c-players"></div>
+      <div class="c-card__body">
+        <div class="c-control">
+          <div class="c-card__title">Number of Players</div>
+          <div class="c-card__actions">
+            <div class="c-actions">
+              <button class="c-actions__item c-actions__item--remove" onclick="removePlayer()" disabled="disabled">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                  <line x1="400" y1="256" x2="112" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></line>
+                </svg>
+              </button>
+              <input class="c-actions__label" value="1" disabled="disabled"/>
+              <button class="c-actions__item c-actions__item--add" onclick="addNewPlayer()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                  <line x1="256" y1="112" x2="256" y2="400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></line>
+                  <line x1="400" y1="256" x2="112" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     
 
     <script src="main.js"></script>
