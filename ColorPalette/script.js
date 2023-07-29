@@ -20,6 +20,7 @@ const generatePalette = () => {
     container.appendChild(color);
   }
 };
+
 generatePalette();
 
 const copyColor = (elem, hexVal) => {
